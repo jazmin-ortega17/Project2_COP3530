@@ -7,6 +7,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <random>
 
 #include "BTree.h"
 #include "DataLoader.h"
