@@ -11,6 +11,7 @@
 #include "BTree.h"
 #include "DataLoader.h"
 #include "SplaySearchTree.h"
+#include "RecommendationEngine.h"
 
 static void printMenu() {
     std::cout << "\n-------- Book recommender (readability) --------\n";
@@ -73,7 +74,10 @@ int main() {
         }
 
         if (opt == 2) {
-            std::vector<double> qs = {5, 8.5, 10, 12, 15};
+            std::mt19937 rng(42);
+            std::uniform_real_distribution<double> dist(1.0, 20.0);
+            std::vector<double> qs;
+            for (int i = 0; i < 1000; i++) qs.push_back(dist(rng));
             auto reps = engine.benchmark(qs, 5, true);
             for (const auto& r : reps)
                 RecommendationEngine::printReport(r);
