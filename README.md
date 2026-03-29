@@ -1,6 +1,9 @@
 <H1> COP3530 - Project 2 </h1>
-This is the template for Project 2 repositories. It includes all the assignment instructions and documentation to help you use GitHub.
-
+Instuctions for using the book recommender:</br>
+1. compile:<br/>
+g++ -std=c++17 -o bookrec main.cpp SplaySearchTree.cpp BTree.cpp<br/>
+2. run:<br/>
+./bookrec
 <h2> Table of Contents </h2>
 
 - [Documentation and resources on how to use GitHub for Project 2](#documentation-and-resources-on-how-to-use-github-for-project-3)
